@@ -14,15 +14,16 @@
         .clear { clear: both; }
         #page-wrap { width: 800px; margin: 40px auto 60px; }
         #pic { float: right; margin: -30px 0 0 0; }
+		.MASK { z-index: -1; position: absolute; left:50%; top:50%; margin-left:-450px; margin-top:-1000px; width:900px; height:3000px; background:black; opacity: 0.5; filter:Alpha(Opacity=30, Style=0); }
         h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; color: #111; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
         h2 { font-family:Calibri ;font-size: 20px; margin: 0 0 6px 0; position: relative; }
-        h2 span { position: absolute; bottom: 0; right: 0; font-style: ; font-family: 微軟正黑體, Serif; font-size: 16px; color: #ddd; font-weight: bold; }
+        h2 span { font-family: 微軟正黑體, Serif;position: absolute; bottom: 0; right: 0; font-style: ;  font-size: 16px; color: #ddd; font-weight: bold; }
         p { margin: 0 0 16px 0; }
-        a { color: #666; text-decoration: none; border-bottom: 1px dotted #bbb; }
+        a { color: #fff; text-decoration: none; border-bottom: 1px dotted #bbb; }
         a:hover { border-bottom-style: solid; color: black; }
         ul { margin: 0 0 32px 17px; }
         #objective { width: 500px; float: left; }
-        #objective p { font-family: Georgia, Serif; font-style: italic; color: #000	; }
+        #objective p { font-family: Georgia, Serif; font-style: italic; color: #00cbf7	; }
         dt { font-family:Calibri; font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
         dd { width: 600px; float: right; }
         dd.clear { float: none; margin: 0; height: 15px; }
@@ -30,10 +31,10 @@
 </head>
 
 <body>
-
+	
     <div id="page-wrap">
-    
         <img src="images/masuku.png" alt="Photo of masuku" id="pic" />
+		
     
         <div id="contact-info" class="vcard">
         
@@ -49,7 +50,7 @@
                 
         <div id="objective">
             <p>
-                I am an outgoing and energetic (ask anybody) young professional, seeking a 
+                I am an outgoing and energetic young, seeking a 
                 career that fits my professional skills, personality, and murderous tendencies. 
                 My squid-like head is a masterful problem solver and inspires fear in who gaze upon it. 
                 I can bring world domination to your organization. 
@@ -93,7 +94,7 @@
                     <li>2013 新鮮人之夜  樂手</li>
                 </ul>
                 
-                <h2>Piano Club <span>總務 2014 - 2015</span></h2>
+                <h2>Piano Club <span>總務 2013 - 2015</span></h2>
                 <ul>
                     <li>2013  冬季成發  表演者影片</li>
                     <li>2014  沐斯克音樂節  宣傳片製作</li>
@@ -126,8 +127,9 @@
         </dl>
         
         <div class="clear"></div>
-    
+		<div class="MASK">123</div>
     </div>
+	
 
 </body>
 
