@@ -13,8 +13,8 @@
 		margin:0px; padding:0px; background: url(images/background.jpg) top center fixed no-repeat; background-size: cover;}
         .clear { clear: both; }
         #page-wrap { width: 800px; margin: 40px auto 60px; }
-        #pic { float: right; margin: -30px 0 0 0; }
-		.MASK { z-index: -1; position: absolute; left:50%; top:50%; margin-left:-450px; margin-top:-1000px; width:900px; height:3000px; background:black; opacity: 0.5; filter:Alpha(Opacity=30, Style=0); }
+        #pic a{ float: right; margin: -30px 0 0 0; }
+		.MASK { z-index: -1; position: absolute; left:50%; top:50%; margin-left:-450px; margin-top:-1200px; width:900px; height:3000px; background:black; opacity: 0.5; filter:Alpha(Opacity=30, Style=0); }
         h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; color: #111; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
         h1 span{ font-size: 36px }
 		h2 { font-family:Calibri ;font-size: 20px; margin: 0 0 6px 0; position: relative; }
@@ -35,13 +35,49 @@
         dt { font-family:Calibri; font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
         dd { width: 600px; float: right; }
         dd.clear { float: none; margin: 0; height: 15px; }
+		
+		footer{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+		display: block;
+	}
+		#footer {
+		padding: 1em 0 1em 0 ;
+		background-color: #1d242a;
+		text-align: center;
+	}
+	#footer .copyright {
+			color: rgba(255, 255, 255, 0.5);
+			font-size: 0.8em;
+			letter-spacing: 0.225em;
+			list-style: none;
+			padding: 0;
+			text-transform: uppercase;
+		}
+	#mouseImg a {
+        background: url("images/masuku.png");/*預設顯示圖片*/
+		float: right; 
+		margin: -30px 0 0 0;
+        display: block;
+        font-size: 0; 
+        height: 250px;/*圖片高度*/
+        width: 250px;/*圖片寬度*/
+    }
+    #mouseImg a:hover {
+        background: url("images/123.gif"); /*滑鼠移過顯示圖片*/
+    }
      </style>
 </head>
 
 <body>
 	
     <div id="page-wrap">
-        <img src="images/masuku.png" alt="Photo of masuku" id="pic" />
+        <!--img src="images/masuku.png" alt="Photo of masuku" id="pic" /-->
+		<div id="mouseImg"><a href="#"></a></div>
 		
     
         <div id="contact-info" class="vcard">
@@ -108,7 +144,7 @@
             <dd class="clear"></dd>
             <dd class="clear"></dd>
             
-            <dt>Experience</dt>
+            <dt>Extracurricular Activites</dt>
             <dd>
                 <h2>Jazz Club <span>美宣 2013 - 2014</span></h2>
                 <ul>
@@ -158,9 +194,17 @@
         </dl>
         
         <div class="clear"></div>
-		<div class="MASK">123</div>
+		<div class="MASK"></div>
+		
+		
     </div>
 	
+	<footer id="footer">
+						
+						<ul class="copyright">
+							© masuku's work
+						</ul>
+	</footer>
 
 </body>
 
