@@ -243,31 +243,48 @@
 							© masuku's work
 						</ul>
 	</footer>
+	<audio id="nyan_voice" width="0" height="0">
+		<source src="nyanlooped.mp3" type="audio/mp3">
+	</audio>	
 
 </body>
 
 <!--script-->
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.fancy-scroll.js"></script>
+<!--window bounce-->
 <script type="text/javascript">
 	$(window).fancy_scroll({
 	animation: "bounce"
+});
+</script>
+<!--nyan voice-->
+<script type="text/JavaScript">
+
+	var aud = document.getElementById("nyan_voice");
+	
+	$("#mouseImg").hover(function(){
+		aud.play();
+		}, function(){
+		aud.pause();
 	});
-	</script>
+
+</script>
+<!--folder animation-->
 <script type="text/JavaScript">
 	$(".folderText").hide();
+	
 	var box=$(".box");
-	//$("h2").click(function(){
-	document.getElementById('folder1').onclick = function(){ 
-	box.toggleClass("openned").toggleClass("showafter");
-	$(".folderText").toggle(400);
+	$("#folder1").click(function(){ box.toggleClass("openned").toggleClass("showafter");
+		$(".folderText").toggle(400);
 		//folderText.style.opacity = 1;
-	};
-	//}); 
-box.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){ 
-  box.toggleClass("transitionstart")
-     .toggleClass("transitionend");
-});
+	}); 
+	//document.getElementById('folder1').onclick = function(){}; 
+	
+	box.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){ 
+	box.toggleClass("transitionstart")
+    .toggleClass("transitionend");
+	});
 	var box_tedx=$(".box");
 </script>
 
