@@ -20,7 +20,7 @@
 		#welcomepic{ text-align: center;}
         
 		
-		#pic { float: right; margin-top: -30px; border-radius: 50%; width:250px; height:250px;}
+		#pic { float: right; margin-top: -30px; margin-left: 30px; border-radius: 50%; width:250px; height:250px;}
 		#picL { float: left; margin-top: -30px; margin-right: 50px; border-radius: 50%; width:250px; height:250px;}
 		#thumb { margin: 0 8px; border-radius: 50%; width:50px; height:50px;}
 		.MASK { z-index: -1; position: absolute; left:50%; top:50%; margin-left:-450px; margin-top:-1300px; width:900px; height:3000px; background:black; opacity: 0.5; filter:Alpha(Opacity=30, Style=0); }
@@ -119,10 +119,24 @@
             <p>
                 侯智薰，大家都叫他Raymond（雷蒙德），成大化工系。曾發起數項活動，
 				有引領眾人前往同一方向行動的「船長」之稱，但他個人笑稱只是個勞苦命的「長工」。
-				<a id="folderButton1"><sub>see more...</sub></a>
+				生性反骨獨立，從不向自己背景的限制低頭。即使化工背景，曾參與商管類組織，
+				並參與商業競賽，也參與過社會創新創業團隊、自助旅行、國際會議籌辦⋯等等。
+				現在則在成大創立團隊前往MIT參加2016iGEM，欲從累積的經驗與能力，整合成大跨領域人才，
+				結合校方及其校外資源，讓學生、校方，以及台灣都能在這過程中有所收穫。
+				<br/><a id="folderButton1"><sub>see more...</sub></a>
             </p>
         </div>
 		
+        <div class="clear"></div>
+		<div class="box showafter transitionend" id="folder1">
+			<dt class="folderText1" style="position: absolute; margin-top: 50px; margin-left: 0px;">Education</dt>
+			<dd class="folderText1" style="position: absolute; margin-top: 50px; margin-left: 200px;">
+				<h2>National Cheng Kung University<br />2013 - 2017</h2>
+                <p><strong>Major:</strong> Chemical Engineering<br />
+				<h2>The Affiliated Senior High School of National Taiwan Normal University<br />2008 - 2012</h2>
+				</p>
+			</dd>
+		</div>
         <div class="clear"></div>
     </div>
 	
@@ -147,7 +161,7 @@
 			</p>
         </div>
 		<div class="clear"></div>
-		<div class="box showafter transitionend" id="folder1">
+		<div class="box showafter transitionend" id="folder2">
 			<dt class="folderText2" style="position: absolute; margin-top: 50px; margin-left: 0px;">Education</dt>
 			<dd class="folderText2" style="position: absolute; margin-top: 50px; margin-left: 200px;">
 				<h2>National Cheng Kung University<br />2012 - 2016</h2>
@@ -177,9 +191,18 @@
                 My squid-like head is a masterful problem solver and inspires fear in who gaze upon it. 
                 I can bring world domination to your organization. <br />
 				So, take it easy, it's just a web exercise =)
+				<a id="folderButton3"><sub>see more...</sub></a>
             </p>
         </div>
 		
+        <div class="clear"></div>
+		<div class="box showafter transitionend" id="folder3">
+			<dt class="folderText3" style="position: absolute; margin-top: 50px; margin-left: 0px;">title</dt>
+			<dd class="folderText3" style="position: absolute; margin-top: 50px; margin-left: 200px;">
+					<p>content</p>
+					<p>其實我還沒想到要放甚麼<br/>就是個很潮的資料夾啦xd</p>
+			</dd>
+		</div>
         <div class="clear"></div>
     </div>
 
@@ -238,7 +261,7 @@
 </script>
 <!--nyan voice-->
 <script type="text/JavaScript">
-
+/*
 	var aud = document.getElementById("nyan_voice");
 	
 	$("#mouseImg").hover(function(){
@@ -246,7 +269,7 @@
 		}, function(){
 		aud.pause();
 	});
-
+*/
 </script>
 <!--folder animation-->
 <script type="text/JavaScript">
@@ -257,7 +280,7 @@
 	
 	function expand( box, button, textId ){
 		button.click(function(){ box.toggleClass("openned").toggleClass("showafter");
-		textId.toggle(400);
+		textId.toggle(350);
 		}); 
 		
 		box.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){ 
@@ -266,10 +289,20 @@
 		});
 	}
 	
-	var box=$(".box#folder1");
+	
+	var box1=$(".box#folder1");
+	var box2=$(".box#folder2");
+	var box3=$(".box#folder3");
 	var box4=$(".box#folder4");
+	
+	expand( box1, $("#folderButton1"), $(".folderText1") );
+	expand( box2, $("#folderButton2"), $(".folderText2") );
+	expand( box3, $("#folderButton3"), $(".folderText3") );
+	expand( box4, $("#folderButton4"), $(".folderText4") );
+	
+	/*
 	$("#folderButton2").click(function(){ box.toggleClass("openned").toggleClass("showafter");
-		$(".folderText2").toggle(400);
+		$(".folderText2").toggle(350);
 		//folderText.style.opacity = 1;
 	}); 
 	//document.getElementById('folder1').onclick = function(){}; 
@@ -278,10 +311,7 @@
 	box.toggleClass("transitionstart")
     .toggleClass("transitionend");
 	});
-	//expand( box1, button, text );
-	//expand( box2, button, text );
-	//expand( box3, button, text );
-	expand( box4, $("#folderButton4"), $(".folderText4") );
+	*/
 </script>
 
 </html>
