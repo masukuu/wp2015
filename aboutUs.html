@@ -34,6 +34,7 @@
 		h2:hover{ background-color:rgba(0, 150, 200, 0.6);}
 		
 		p { margin: 0 0 16px 0; }
+		p sub { font-family: 微軟正黑體; font-size: 14px; color: #00cbf7; font-weight: normal; cursor:pointer}
         a { color: #fff; text-decoration: none; border-bottom: 1px dotted #bbb; }
         a:hover { border-bottom-style: solid; color: black; }
 		a img {
@@ -92,7 +93,7 @@
 
 
 <body>
-
+<!-- welcome -->
 	<div id="page-wrap">
 		<div>
 		<p id="welcome">about us.</p>
@@ -112,13 +113,9 @@
         <div id="contact-info" class="vcard">
             <!-- Microformats! -->
             <h1 class="fn">侯智薰 <span>Raymond Hou</span></h1>
-            <p>
-                Cell: <span class="tel">886 989 746 696</span><br />
-                Email: <a class="email" href="mailto:mask42302@gmail.com">mask42302@gmail.com</a>
-            </p>
         </div>
                 
-        <div id="objective">
+        <div>
             <p>
                 I am an outgoing and energetic young, seeking a 
                 career that fits my professional skills, personality, and murderous tendencies. 
@@ -138,23 +135,30 @@
         <div id="contact-info" class="vcard">
             <!-- Microformats! -->
             <h1 class="fn">方亮中 <span>Masuku Fang</span></h1>
-            <p>
+            <!--p>
                 Cell: <span class="tel">886 989 746 696</span><br />
                 Email: <a class="email" href="mailto:mask42302@gmail.com">mask42302@gmail.com</a>
-            </p>
+            </p-->
         </div>
                 
-        <div id="objective">
+        <div>
             <p>
-                I am an outgoing and energetic young, seeking a 
-                career that fits my professional skills, personality, and murderous tendencies. 
-                My squid-like head is a masterful problem solver and inspires fear in who gaze upon it. 
-                I can bring world domination to your organization. <br />
-				So, take it easy, it's just a web exercise =)
-            </p>
+                22歲高雄人，生長在熱如火的南台灣因此總是以笑臉迎人。雖然就讀電機系，
+				但最大的夢想是當導演。只要看見長得像 ray brown 的老外拿起低音大提琴就會不自覺的興奮想上前攀談。
+				<a id="folderButton2"><sub>see more...</sub></a>
+			</p>
         </div>
-		
-        <div class="clear"></div>
+		<div class="clear"></div>
+		<div class="box showafter transitionend" id="folder1">
+			<dt class="folderText2" style="position: absolute; margin-top: 50px; margin-left: 0px;">Education</dt>
+			<dd class="folderText2" style="position: absolute; margin-top: 50px; margin-left: 200px;">
+				<h2>National Cheng Kung University<br />2012 - 2016</h2>
+                <p><strong>Major:</strong> Electrical Engineering<br />
+				<h2>Kaohsiung Municipal Kaohsiung Senior High School<br />2008 - 2011</h2>
+				</p>
+			</dd>
+		</div>
+        
         <div class="clear"></div>
 		
     </div>
@@ -166,13 +170,9 @@
         <div id="contact-info" class="vcard">
             <!-- Microformats! -->
             <h1 class="fn">游皓程 <span>Jonathan You</span></h1>
-            <p>
-                Cell: <span class="tel">886 989 746 696</span><br />
-                Email: <a class="email" href="mailto:mask42302@gmail.com">mask42302@gmail.com</a>
-            </p>
         </div>
                 
-        <div id="objective">
+        <div>
             <p>
                 I am an outgoing and energetic young, seeking a 
                 career that fits my professional skills, personality, and murderous tendencies. 
@@ -192,23 +192,26 @@
         <div id="contact-info" class="vcard">
             <!-- Microformats! -->
             <h1 class="fn">林雅韋 <span>Eileen Lin</span></h1>
-            <p>
-                Cell: <span class="tel">886 989 746 696</span><br />
-                Email: <a class="email" href="mailto:mask42302@gmail.com">mask42302@gmail.com</a>
-            </p>
         </div>
                 
-        <div id="objective">
+        <div>
             <p>
-                I am an outgoing and energetic young, seeking a 
-                career that fits my professional skills, personality, and murderous tendencies. 
-                My squid-like head is a masterful problem solver and inspires fear in who gaze upon it. 
-                I can bring world domination to your organization. <br />
-				So, take it easy, it's just a web exercise =)
+                I'm a composed but humorous teenager, challenging everything in life to explore who am I. 
+				Attempt to make more professional in what I learned, and be softer in mercy. 
+				Time I enjoy wasting was not wasted time and believing in spectacular find followed by itself. 
+					I record and take it all in.
+				<a id="folderButton4"><sub>see more...</sub></a>
             </p>
         </div>
 		
         <div class="clear"></div>
+		<div class="box showafter transitionend" id="folder4">
+			<dt class="folderText4" style="position: absolute; margin-top: 50px; margin-left: 0px;">title</dt>
+			<dd class="folderText4" style="position: absolute; margin-top: 50px; margin-left: 200px;">
+					<p>content</p>
+					<p>其實我還沒想到要放甚麼<br/>就是個很潮的資料夾啦xd</p>
+			</dd>
+		</div>
         <div class="clear"></div>
 		
     </div>
@@ -216,7 +219,7 @@
 	
 	<footer id="footer">
 		<ul class="copyright">
-			© masuku's work
+			© masuku | design
 		</ul>
 	</footer>
 	
@@ -233,7 +236,7 @@
 <script type="text/javascript">
 	$(window).fancy_scroll({
 	animation: "bounce"
-});
+	});
 </script>
 <!--nyan voice-->
 <script type="text/JavaScript">
@@ -249,11 +252,26 @@
 </script>
 <!--folder animation-->
 <script type="text/JavaScript">
-	$(".folderText").hide();
+	$(".folderText1").hide();
+	$(".folderText2").hide();
+	$(".folderText3").hide();
+	$(".folderText4").hide();
 	
-	var box=$(".box");
-	$("#folder1").click(function(){ box.toggleClass("openned").toggleClass("showafter");
-		$(".folderText").toggle(400);
+	function expand( box, button, textId ){
+		button.click(function(){ box.toggleClass("openned").toggleClass("showafter");
+		textId.toggle(400);
+		}); 
+		
+		box.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){ 
+		box.toggleClass("transitionstart")
+		.toggleClass("transitionend");
+		});
+	}
+	
+	var box=$(".box#folder1");
+	var box4=$(".box#folder4");
+	$("#folderButton2").click(function(){ box.toggleClass("openned").toggleClass("showafter");
+		$(".folderText2").toggle(400);
 		//folderText.style.opacity = 1;
 	}); 
 	//document.getElementById('folder1').onclick = function(){}; 
@@ -262,7 +280,10 @@
 	box.toggleClass("transitionstart")
     .toggleClass("transitionend");
 	});
-	var box_tedx=$(".box");
+	//expand( box1, button, text );
+	//expand( box2, button, text );
+	//expand( box3, button, text );
+	expand( box4, $("#folderButton4"), $(".folderText4") );
 </script>
 
 </html>
