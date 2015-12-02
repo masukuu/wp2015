@@ -7,8 +7,9 @@ html {
 }
 
 body {
-  /*background: #c1bdba;*/
+  
   background: url(images/signup-background.jpg) top center fixed no-repeat;
+  background-size: cover;
   font-family: 'Titillium Web', sans-serif;
 }
 
