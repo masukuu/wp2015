@@ -13,7 +13,7 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
-#pic { margin-top: 0px; margin-left: 135px; width:250px; height:250px;}
+#pic { display:block; margin:auto; width:250px; height:250px;}
 
 a {
   text-decoration: none;
