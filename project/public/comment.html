@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="stylesheet" href="/css/maincommment.css">
+</head>
+<body>
+
+<br></br>
+
+<div id="id_wrapper">
+
+  <div id="id_header">
+    Integration Evaluation
+  </div> <!-- /id_header -->
+
+  <div id="id_content">
+    Content Block
+  </div> <!-- /id_content -->
+  <p></p>
+  <footer id="id_footer">
+    Footer Block
+    <div style = "text-align:center;"> 
+      <div class="control-group">
+	<label class="control-label" for="comment">評價</label>
+	<br></br>
+	<div class="controls">
+	  <form>
+	    <input type="radio" name="stars" value="a" /> 0
+	    <input type="radio" name="stars" value="b" /> 1
+	    <input type="radio" name="stars" value="a" /> 2
+	    <input type="radio" name="stars" value="b" /> 3
+	    <input type="radio" name="stars" value="a" /> 4
+	    <input type="radio" name="stars" value="b" /> 5
+	  </form>
+	  <form>
+	    <input type="text" class="idnput-xxlarge" id="comment" name="comment">
+	  </form>
+	</div>
+      </div>
+      <button class="btn btn-primary" id="sent">送出</button>
+    </div>
+  </footer> <!-- /id_footer -->
+</div> <!-- /id_wrapper -->
+
+
+
+</body>
+</html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+<script type="text/javascript" src="https://cdn.socket.io/socket.io-1.3.7.js"></script>
+
+<script type="text/javascript" src="js/com.js"></script>
