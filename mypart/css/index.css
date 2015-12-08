@@ -2,10 +2,64 @@ body {
 	background: url(../images/signup-background.jpg) top center fixed no-repeat;
 	background-size: cover;
 	background-position: center 50%;
-
+	
 	margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #1ab188;
+  -webkit-transition: .5s ease;
+          transition: .5s ease;
+}
+a:hover {
+  color: #179b77;
+}
+
+.user-pic {
+  list-style: none;
+  padding: 0;
+  float: right;
+  margin-right: 0px;
+  margin-top: 16px;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.user-pic img:hover {
+  opacity:0.7;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  float: right;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 17px;
+  text-align: center;
+  width: 100px;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+.tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
 /*h1 {
 	padding-top: 15px;
 	padding-left: 40px;
@@ -51,7 +105,7 @@ body {
 	height: 456px;
 	line-height: 250px;
 	margin-left: 40px;
-	margin-right: 100px;
+	margin-right: 40px;
 	overflow: hidden;
 }
 .frame ul {
