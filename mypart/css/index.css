@@ -16,6 +16,16 @@ a:hover {
   color: #179b77;
 }
 
+#add-button {
+	background:rgba(22, 22, 22, 0.81);
+	-webkit-transition: .5s ease;
+	transition: .5s ease;
+}
+
+#add-button:hover{
+	background:rgba(211, 211, 211, 0.85);
+}
+
 .user-pic {
   list-style: none;
   padding: 0;
