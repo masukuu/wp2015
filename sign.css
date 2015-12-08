@@ -13,7 +13,8 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
-#pic { display:block; margin:auto; width:250px; height:250px;}
+.pic { display:block; margin:auto; width:250px; height:250px;}
+.pic_signup { display:block; margin:auto; margin-bottom:10px; height:250px;}
 
 a {
   text-decoration: none;
