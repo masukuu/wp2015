@@ -14,26 +14,41 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('public'));
 
 var MongoClient = require('mongodb').MongoClient;
-var URL = 'mongodb://team16:hfly@localhost/team16';
+var URL = 'mongodb://######:#####@localhost/#####';
 MongoClient.connect(URL,function(err,db){
 
-  //Websocket，建立即時更新功能
-  io.on('connection',function(socket){
-
-    socket.on('start',function(){
-
-      comment.find({}).toArray(function(err,results){ 
-	console.log(results);
-	socket.emit('update',results);   
-      });
-    });
-
-  });  
 
   console.log('mongodb!');
 
   var userpassword = db.collection('userpassword');
   var comment = db.collection('comment');
+	
+  var comment1 = db.collection('comment1');
+  var comment2 = db.collection('comment2');
+  var comment3 = db.collection('comment3');
+  var comment4 = db.collection('comment4');
+  var comment5 = db.collection('comment5');
+  var comment6 = db.collection('comment6');
+  var comment7 = db.collection('comment7');
+  var comment8 = db.collection('comment8');
+  var comment9 = db.collection('comment9');
+
+
+
+  //Websocket，建立即時更新功能
+  io.on('connection',function(socket){
+	console.log('socket');
+    socket.on('send',function(){
+
+      comment2.find({}).toArray(function(err,results){ 
+	console.log(results);
+	socket.broadcast.emit('update',results);   
+      });
+    });
+
+  });  
+
+
 
   app.post('/click',function(req,res){
     if(err) throw err; 
@@ -50,16 +65,295 @@ MongoClient.connect(URL,function(err,db){
   app.post('/commentclick',function(req,res){
     if (err) throw err;	
     console.log('commentclick');
-    //    console.log(req.body);
+ //   console.log(req.body);
     comment.insert(req.body);
-    //  comment.remove();
+//  comment.remove();
+    
+    
     comment.find({}).toArray(function(err,results){ 
+      console.log(results);
       res.send(results);   
     });
 
     //已經find到的result就是抓到要的database
   });
-  //commentclick -- should be updated?
+
+
+  app.post('/enterpage',function(req,res){
+    if (err) throw err;	
+  
+ //   console.log(req.body);
+  //  comment.insert(req.body);
+//  comment.remove();
+     
+    comment.find({}).toArray(function(err,results){ 
+      console.log(results);
+      res.send(results);   
+    });
+
+  });
+
+  app.post('/enterpage1',function(req,res){
+    if (err) throw err;	
+  
+ //   console.log(req.body);
+  //  comment.insert(req.body);
+//  comment.remove();
+     
+    comment1.find({}).toArray(function(err,results){ 
+      console.log(results);
+      res.send(results);   
+    });
+
+  });
+
+  app.post('/comment1',function(req,res){
+  
+    if (err) throw err;
+    console.log('comment1');
+   comment1.insert(req.body);
+    //comment1.remove();
+    comment1.find({}).toArray(function(err,comment1){
+    
+      res.send(comment1);
+    
+    });
+  
+  });
+
+
+  app.post('/enterpage2',function(req,res){
+    if (err) throw err;	
+  
+ //   console.log(req.body);
+  //  comment.insert(req.body);
+//  comment.remove();
+     
+    comment2.find({}).toArray(function(err,results){ 
+      console.log(results);
+      res.send(results);   
+    });
+
+  });
+
+  app.post('/comment2',function(req,res){
+  
+    if (err) throw err;
+   comment2.insert(req.body);
+    console.log('comment2');
+    //comment1.remove();
+    comment2.find({}).toArray(function(err,comment2){
+    
+      res.send(comment2);
+    
+    });
+  
+  });
+
+  app.post('/enterpage3',function(req,res){
+    if (err) throw err;	
+  
+ //   console.log(req.body);
+  //  comment.insert(req.body);
+//  comment.remove();
+     
+    comment3.find({}).toArray(function(err,results){ 
+      console.log(results);
+      res.send(results);   
+    });
+
+  });
+  
+  app.post('/comment3',function(req,res){
+  
+    if (err) throw err;
+  
+    comment3.insert(req.body);
+    console.log('comment3');
+    //comment1.remove();
+    comment3.find({}).toArray(function(err,comment3){
+    
+      res.send(comment3);
+    
+    });
+  
+  });
+
+  
+  app.post('/enterpage4',function(req,res){
+    if (err) throw err;	
+  
+ //   console.log(req.body);
+  //  comment.insert(req.body);
+//  comment.remove();
+     
+    comment4.find({}).toArray(function(err,results){ 
+      console.log(results);
+      res.send(results);   
+    });
+
+  });
+  
+  
+  app.post('/comment4',function(req,res){
+  
+    if (err) throw err;
+    console.log('comment4');
+    comment4.insert(req.body);
+    //comment1.remove();
+    comment4.find({}).toArray(function(err,comment4){
+    
+      res.send(comment4);
+    
+    });
+  
+  });
+
+  
+  app.post('/enterpage5',function(req,res){
+    if (err) throw err;	
+  
+ //   console.log(req.body);
+  //  comment.insert(req.body);
+//  comment.remove();
+     
+    comment5.find({}).toArray(function(err,results){ 
+      console.log(results);
+      res.send(results);   
+    });
+
+  });
+  app.post('/comment5',function(req,res){
+  
+    if (err) throw err;
+
+    
+    comment5.insert(req.body);
+    console.log('comment5');
+    //comment1.remove();
+    comment5.find({}).toArray(function(err,comment5){
+    
+      res.send(comment5);
+    
+    });
+  
+  });
+ 
+  
+  app.post('/enterpage6',function(req,res){
+    if (err) throw err;	
+  
+ //   console.log(req.body);
+  //  comment.insert(req.body);
+//  comment.remove();
+     
+    comment6.find({}).toArray(function(err,results){ 
+      console.log(results);
+      res.send(results);   
+    });
+
+  });
+  app.post('/comment6',function(req,res){
+  
+    if (err) throw err;
+  
+    comment6.insert(req.body);
+    
+    console.log('comment6');
+    //comment1.remove();
+    comment6.find({}).toArray(function(err,comment6){
+    
+      res.send(comment6);
+    
+    });
+  
+  });
+
+  
+  app.post('/enterpage7',function(req,res){
+    if (err) throw err;	
+  
+ //   console.log(req.body);
+  //  comment.insert(req.body);
+//  comment.remove();
+     
+    comment7.find({}).toArray(function(err,results){ 
+      console.log(results);
+      res.send(results);   
+    });
+
+  });
+  app.post('/comment7',function(req,res){
+  
+    if (err) throw err;
+    
+    
+    comment7.insert(req.body);
+    console.log('comment7');
+    //comment1.remove();
+    comment7.find({}).toArray(function(err,comment7){
+    
+      res.send(comment7);
+    
+    });
+  
+  });
+ 
+  app.post('/enterpage8',function(req,res){
+    if (err) throw err;	
+  
+ //   console.log(req.body);
+  //  comment.insert(req.body);
+//  comment.remove();
+     
+    comment8.find({}).toArray(function(err,results){ 
+      console.log(results);
+      res.send(results);   
+    });
+
+  });
+  
+  app.post('/comment8',function(req,res){
+  
+    if (err) throw err;
+    console.log('comment8');
+    comment8.insert(req.body);
+    //comment1.remove();
+    comment8.find({}).toArray(function(err,comment8){
+    
+      res.send(comment8);
+    
+    });
+  
+  });
+ 
+  
+  app.post('/enterpage9',function(req,res){
+    if (err) throw err;	
+  
+ //   console.log(req.body);
+  //  comment.insert(req.body);
+//  comment.remove();
+     
+    comment9.find({}).toArray(function(err,results){ 
+      console.log(results);
+      res.send(results);   
+    });
+
+  });
+  app.post('/comment9',function(req,res){
+  
+    if (err) throw err;
+    console.log('comment9');
+    comment9.insert(req.body);
+    //comment1.remove();
+    comment9.find({}).toArray(function(err,comment9){
+    
+      res.send(comment9);
+    
+    });
+  
+  });
   app.get('/comment',function(req,res){
     // 應放'/'或放'/start'
     if(err) throw err;
